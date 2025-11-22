@@ -1,8 +1,8 @@
-PWD /Users/akhilesh/Desktop/GitHub/Holography Lab
+PWD /Users/akhilesh/Desktop/GitHub/Holography_Lab
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/akhilesh/Desktop/GitHub/Holography Lab/Holography Lab by Akhilesh Menon and Boya Zhang.tex
+INPUT /Users/akhilesh/Desktop/GitHub/Holography_Lab/Holography Lab by Akhilesh Menon and Boya Zhang.tex
 OUTPUT Holography Lab by Akhilesh Menon and Boya Zhang.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
