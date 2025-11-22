@@ -1,0 +1,136 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{titlesec}
+
+% Formatting for headers
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Title Page Information
+\title{\textbf{Construction and Analysis of a Single-Beam Reflection Hologram}}
+\author{
+    \textbf{Name: Akhilesh Menon} \\
+    Student Number: [1011148768] \\
+    \and
+    \textbf{Partner: Boya Zhang} \\
+    Student Number: [ -insert student number-]
+}
+\date{Date of Experiment: 12/11/2025 \\ Course: PHY293}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This experiment aimed to produce a white-light single-beam reflection hologram of a three-dimensional object using a Helium-Neon (He-Ne) laser ($\lambda = 632.8$ nm). The experimental setup utilized a spatial filter to clean the laser beam and a photographic emulsion plate positioned anterior to the object to record the interference pattern between the reference beam and the wavefront reflected from the object. Despite adhering to the procedural alignment and chemical development stages, the final developed plate yielded no visible holographic image. This null result is attributed to two primary optical factors: significant spatial noise introduced by contamination within the spatial filter pinhole, which prevented uniform wavefront generation, and the specular nature of the chosen object's surface, which prevented adequate diffuse reflection back to the emulsion plate. This report analyzes the physics of these failure modes and discusses the fundamental principles of holographic recording and reconstruction.
+\end{abstract}
+
+\section{Introduction}
+Holography is a technique that records the complete optical wavefront of an object, capturing both the amplitude (intensity) and the phase of the light. Unlike standard photography, which records only intensity via a 2D projection, holography allows for the reconstruction of a full three-dimensional image exhibiting parallax [1].
+
+In this experiment, we employed the single-beam reflection method (Denisyuk holography). In this configuration, a coherent laser beam passes through a photographic emulsion plate (acting as the reference beam), strikes the object placed immediately behind it, and reflects back onto the plate (acting as the object beam). These two counter-propagating beams interfere to form standing wave patterns within the emulsion [2]. The spacing of these interference fringes is on the order of half the wavelength of the light used ($\lambda/2$). When the plate is developed and illuminated by a white light point source, these fringes act as Bragg diffraction planes, selecting specific wavelengths to reconstruct the virtual image of the object.
+
+The quality of a hologram is heavily dependent on the coherence of the light source and the stability of the optical setup. Specifically, the reference beam must be spatially "clean"—free of diffraction artifacts caused by dust or imperfections—to ensure uniform exposure.
+
+\section{Materials and Methods}
+
+\subsection{Experimental Setup}
+The experiment was conducted on a vibration-isolated granite table to minimize phase errors during exposure. The apparatus included:
+\begin{itemize}
+    \item A 5 mW Helium-Neon (He-Ne) laser.
+    \item An electromechanical shutter to control exposure time.
+    \item A mirror on a kinematic mount for beam steering.
+    \item A spatial filter assembly consisting of a $10\times$ microscope objective and a 25 $\mu$m pinhole aperture.
+    \item A plate holder positioned at Brewster's angle ($\approx 56^\circ$) relative to the beam to minimize back-reflections from the glass substrate.
+    \item A photographic emulsion plate and a "shiny" metallic figurine (object).
+\end{itemize}
+
+\subsection{Procedure and Alignment Challenges}
+The laser beam was leveled and directed through the spatial filter. The objective lens focused the beam, and the pinhole was positioned at the focal point to filter out high-frequency spatial noise (imperfections and dust), theoretically resulting in a Gaussian intensity profile [2].
+
+**Note on Spatial Filtering:** A significant portion of the laboratory session (approximately 4 hours) was dedicated to the alignment of the spatial filter. The square insert containing the pinhole aperture was found to be contaminated with particulate matter. Despite utilizing micrometer adjustments ($x, y, z$), the beam exhibited persistent diffraction rings and destructive interference patterns projected onto the screen. This indicated that the "cleaning" of the beam was incomplete, resulting in a non-uniform reference beam.
+
+Once a maximally uniform beam was achieved, the object was placed directly behind the plate holder. Under safe-light conditions, the emulsion plate was loaded, and the shutter was triggered for a 2-second exposure.
+
+\subsection{Development}
+The exposed plate was processed in the darkroom using the following sequence:
+\begin{enumerate}
+    \item Development in Kodak D-19 (1:1) for 5 minutes with agitation.
+    \item Water rinse.
+    \item Fixer bath for 10 minutes.
+    \item Extensive water wash (5 minutes) and air drying.
+\end{enumerate}
+
+\section{Results}
+
+\subsection{Visual Inspection of the Photoplate}
+Following the drying process, the emulsion plate appeared dark with a characteristic black spot in the center, corresponding to the area of highest laser intensity. 
+
+\begin{figure}[H]
+    \centering
+    % REPLACE THE FILENAME BELOW WITH YOUR ACTUAL PHOTO OF THE BLACK PLATE
+    % \includegraphics[width=0.6\textwidth]{black_plate.jpg} 
+    \caption{The developed holographic plate. Note the absence of a visible distinct image and the presence of uneven exposure regions.}
+    \label{fig:plate}
+\end{figure}
+
+\subsection{Attempted Reconstruction}
+To visualize the reflection hologram, the plate was illuminated by a white light point source (incandescent bulb) at an angle of approximately $45^\circ$, matching the original reference beam angle [2].
+
+**Observation:** No three-dimensional image of the object was visible. The plate exhibited only broad spectral reflections and noise, but the wavefront of the figurine was not reconstructed. Tilting the plate (to check for parallax) yielded no visual results.
+
+\section{Discussion}
+
+\subsection{Analysis of Failure Modes}
+The failure to produce a visible hologram is attributed to two specific experimental conditions:
+
+\textbf{1. Specular vs. Diffuse Reflection (The Object):}
+We utilized a shiny, metallic object. Holography relies on the object scattering light in many directions (diffuse reflection) so that light from every point on the object reaches the entire surface of the plate [3]. A shiny object acts as a curved mirror, causing \textit{specular reflection}, where the light reflects in a single, specific direction defined by the law of reflection ($\theta_i = \theta_r$). Consequently, the majority of the object beam likely missed the plate entirely or created localized "hot spots" of intensity that saturated the film, preventing the recording of the delicate interference fringes required for image reconstruction.
+
+\textbf{2. Spatial Noise (The Pinhole):}
+The difficulty in cleaning the spatial filter pinhole had detrimental effects. The pinhole is designed to pass only the central maximum of the Airy disk, blocking high-frequency noise caused by dust on the lens [2]. Because our pinhole was obstructed/dirty, the reference beam impinging on the plate contained diffraction artifacts (rings and shadows). This non-uniform intensity leads to variable exposure across the plate. Furthermore, if the reference beam is not a clean spherical wave, the phase relationship required to record the hologram is compromised.
+
+\subsection{Theoretical Questions (Lab Manual)}
+To further understand the principles of holography, we address the following concepts:
+
+\textbf{1. Latent Image vs. Holographic Image:}
+A latent image is the invisible chemical change (clumps of silver atoms) formed on the photographic emulsion immediately after exposure but before development [4]. A holographic image is the reconstructed wavefront seen \textit{after} the plate has been chemically developed and fixed, creating a permanent diffraction grating.
+
+\textbf{2. \& 3. Shattered Hologram Properties:}
+If a hologram is shattered, each individual shard will still display the \textit{entire} image of the object. However, the image on a small piece will differ in quality; the resolution will decrease (due to the diffraction limit of the smaller aperture), and the range of viewable angles (parallax) will be significantly restricted. It is akin to looking through a small keyhole versus a large window [5].
+
+\textbf{4. Distributed Information:}
+This redundancy occurs because holography does not record a point-to-point image (like a lens). Instead, light from \textit{every} point on the object spreads out and strikes \textit{every} point on the photographic plate. Therefore, even a small fragment of the plate contains wave information from the entire object, allowing for full reconstruction [1].
+
+\section{Conclusion}
+While this experiment did not yield a visible holographic image, it provided significant insight into the strict optical requirements of holography. The failure demonstrated that a diffuse object surface is critical for reflecting the object beam back to the plate, and that a clean spatial filter is essential for creating a uniform reference beam. The extensive time required to align the spatial filter highlighted the sensitivity of interferometric systems to microscopic contamination. Future attempts would benefit from using a matte-white object to maximize diffuse reflection and ultrasonic cleaning of the pinhole aperture prior to alignment.
+
+\begin{thebibliography}{9}
+
+\bibitem{manual}
+University of Toronto, ``Holography Lab Manual (OLD\_Hologram),'' Department of Physics, 2014.
+
+\bibitem{sample}
+J. Kim, M. Bhuiyan, and A. A. Thomas, ``Holography Lab Report,'' University of Toronto, Oct. 2025.
+
+\bibitem{york}
+York University, ``Holography,'' \textit{Physwiki}, Oct. 2013. [Online]. Available: https://physwiki.apps01.yorku.ca.
+
+\bibitem{wiki}
+``Latent image,'' \textit{Wikipedia}, Mar. 2021. [Online]. Available: https://en.wikipedia.org/wiki/Latent\_image.
+
+\bibitem{liti}
+LitiHolo, ``What happens when you cut a hologram in half?,'' Oct. 2019. [Online]. Available: https://www.litiholo.com/blog.
+
+\end{thebibliography}
+
+\end{document}
